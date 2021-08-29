@@ -16,7 +16,7 @@ export const PermissionPageContent = styled.div`
   overflow: hidden;
 `;
 
-export const PermissionPageSidebar = styled.div`
+export const PermissionPageSidebar = styled.aside`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,6 @@ export const PermissionPageSidebar = styled.div`
   overflow: auto;
   border-left: 1px solid ${color("border")};
   max-width: 300px;
-  padding: 2rem;
 `;
 
 export const TabsContainer = styled.div`

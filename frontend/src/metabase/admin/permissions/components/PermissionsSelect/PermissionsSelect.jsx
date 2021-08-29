@@ -86,7 +86,7 @@ export const PermissionsSelect = memo(function PermissionsSelect({
     </Tooltip>
   );
 
-  const actionsForCurrentValue = actions?.[selectedOption.value] || [];
+  const actionsForCurrentValue = actions?.[selectedOption?.value] || [];
   const hasActions = actionsForCurrentValue.length > 0;
 
   return (

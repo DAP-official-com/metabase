@@ -1,4 +1,5 @@
 import {
+  PLUGIN_ADMIN_PERMISSIONS,
   PLUGIN_ADMIN_USER_FORM_FIELDS,
   PLUGIN_ADMIN_PERMISSIONS_TABLE_ROUTES,
   PLUGIN_ADMIN_PERMISSIONS_TABLE_GROUP_ROUTES,
@@ -51,6 +52,12 @@ const getEditSegmentedAcessPostAction = (entityId, groupId, view) =>
   push(getEditSegementedAccessUrl(entityId, groupId, view));
 
 if (hasPremiumFeature("sandboxes")) {
+  PLUGIN_ADMIN_PERMISSIONS.push({
+    label: t`Block`,
+    value: "block",
+    icon: "close",
+    iconColor: "danger",
+  });
   PLUGIN_ADMIN_USER_FORM_FIELDS.push({
     name: "login_attributes",
     title: "Attributes",

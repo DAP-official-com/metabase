@@ -24,6 +24,7 @@ import {
   UNABLE_TO_CHANGE_ADMIN_PERMISSIONS,
 } from "../constants/messages";
 import {
+  PLUGIN_ADMIN_PERMISSIONS,
   PLUGIN_ADMIN_PERMISSIONS_TABLE_FIELDS_ACTIONS,
   PLUGIN_ADMIN_PERMISSIONS_TABLE_FIELDS_OPTIONS,
   PLUGIN_ADMIN_PERMISSIONS_TABLE_FIELDS_POST_ACTION,
@@ -414,7 +415,9 @@ const buildDatabasePermissions = (
         DATA_PERMISSION_OPTIONS.all,
         DATA_PERMISSION_OPTIONS.controlled,
         DATA_PERMISSION_OPTIONS.noSelfService,
+        // TODO: replace
         DATA_PERMISSION_OPTIONS.block,
+        ...PLUGIN_ADMIN_PERMISSIONS,
       ],
       postActions: {
         controlled: () =>

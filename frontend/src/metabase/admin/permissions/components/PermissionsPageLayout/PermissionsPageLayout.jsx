@@ -70,7 +70,7 @@ function PermissionsPageLayout({
   navigateToTab,
   helpContent,
 }) {
-  const [shouldShowHelp, setShouldShowHelp] = useState(false);
+  const [shouldShowHelp, setShouldShowHelp] = useState(true);
   const beforeLeaveConfirmation = useLeaveConfirmation({
     router,
     route,

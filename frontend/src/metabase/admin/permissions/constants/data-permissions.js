@@ -19,6 +19,7 @@ export const DATA_PERMISSION_OPTIONS = {
     icon: "eye",
     iconColor: "accent5",
   },
+  // TODO: remove
   block: {
     label: t`Block`,
     value: "block",
